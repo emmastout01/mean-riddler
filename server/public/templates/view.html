@@ -1,4 +1,9 @@
 <div>
     <h1>Here's your riddles!</h1>
-    
+    <div ng-repeat="riddle in view.riddles.data">
+        Creator: {{riddle.creator}} <br>
+        Setup: {{riddle.setup}} <br>
+        Punchline: {{riddle.punchline}} <br>
+        <br>
+    </div>
 </div>

@@ -5,4 +5,6 @@ myApp.controller('ViewRiddleController', function(RiddleService) {
 
     console.log('riddles from add riddle controller', vm.riddles);
 
+    RiddleService.refreshRiddles();
+    
 });

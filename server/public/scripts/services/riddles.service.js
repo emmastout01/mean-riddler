@@ -2,8 +2,9 @@ myApp.service('RiddleService', function($http) {
     console.log('riddle service sourced');
     var self = this;
     self.newRiddle = {};
-    self.riddles = [];
-    
+    self.riddles = {data: []};
+
+ 
 
     self.addRiddle = function(newRiddle) {
         console.log('form submitted');
@@ -18,10 +19,11 @@ myApp.service('RiddleService', function($http) {
     self.refreshRiddles = function() {
         $http.get('/riddles').then(function(response) {
             console.log('found riddles', response);
-            self.riddles = response.data;
+            self.riddles.data = response.data;
         }).catch(function(err) {
             console.log('get didn\'t work!', err);
         })
     }
 
+    self.refreshRiddles();
 })
