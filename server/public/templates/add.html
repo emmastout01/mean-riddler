@@ -1,0 +1,13 @@
+<div>
+    <h1>Add Riddle</h1>
+    <form ng-submit="add.addRiddle(add.newRiddle)">
+        <label for="creator">Creator: </label>
+        <input type="text" ng-model="add.newRiddle.creator" id="creator" placeholder="Riddle Creator" />
+        <label for="setup">Setup: </label>
+        <input type="text" ng-model="add.newRiddle.setup" id="setup" placeholder="Setup" />
+        <label for="punchline">Punchline: </label>
+        <input type="text" ng-model="add.newRiddle.punchline" id="punchline" placeholder="Punchline" />
+        <button class="btn btn-primary">Add Riddle</button>
+    </form>
+
+</div>
